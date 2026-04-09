@@ -140,8 +140,9 @@ For a mutable binding `let mut x = 10`:
 - **Operations permitted**: Load and Store
 
 At last:
-- The hardware does not differentiate between mutable and immutable memory, it just executes read and write instructions to addresses. This helps in Rust design for the program optimization.
+- The hardware does not differentiate between mutable and immutable memory, it just executes read and write instructions to addresses. This design decision be of use to optimization.
 
 **Reference**  
 [1] Rust Language Team. (2024). _The Rust Reference: Variables_. Retrieved from: https://doc.rust-lang.org/reference/variables.html
+
 [2] Rust by Example. *Variable Binding: Scope and Shadowing*. Retrieved from: https://doc.rust-lang.org/rust-by-example/variable_bindings/scope.html 
