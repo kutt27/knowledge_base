@@ -61,7 +61,7 @@ docker run -d -p 3000:3000 -v $(pwd):/app my-api
 
 `docker volume ls` lists volumes and `docker volume rm` removes them. 
 
-> Docker is meant to be thrown away, therefore, if anything that needs persistence, we should keep that in volume or bind it to our own vm/host device.
+> Containers are meant to be thrown away, therefore, if anything that needs persistence, we should keep that in volume or bind it to our own vm/host device.
 
 ### Networking
 
@@ -85,7 +85,7 @@ Now the API can connect to `db:5432` directly. This is the same trick Compose pe
 
 ## Dockerfile
 
-Every Dockerfile have the same structure how big or small it is. Given a simple Dockerfile based on python file.
+Every Dockerfile have the same structure how big or small it is. 
 
 ```dockerfile
 FROM python:3.11-slim
