@@ -83,6 +83,15 @@ docker run -d --name api --network app-net my-api
 
 Now the API can connect to `db:5432` directly. This is the same trick Compose performs for you later, and it is the most common source of confusion, so it is worth doing once by hand before Compose hides it.
 
+```mermaid
+graph LR
+    api["api container<br/>172.18.0.3"] -- "postgres://db:5432" --> dns["Embedded DNS<br/>127.0.0.11"]
+    dns -- "db → 172.18.0.2" --> api
+    api -- "172.18.0.2:5432" --> db["db container<br/>172.18.0.2"]
+    api -.-> br["app-net bridge<br/>(Linux bridge)"]
+    db -.-> br
+```
+
 ## Dockerfile
 
 Every Dockerfile have the same structure how big or small it is. 
