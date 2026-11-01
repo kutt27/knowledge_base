@@ -213,24 +213,4 @@ __pycache__
 
 This keeps dependency folders, secrets, and build output out of the image. The result is a faster, smaller, safer build, and it also stops leaking a local `.env` into an image you might share.
 
-## When something breaks
 
-Debugging follows one repeatable order, and it is worth saying out loud: logs first, Compose configuration second, networking and environment variables third. Concretely, check what is running with `docker compose ps`, read the failing service with `docker compose logs -f <service>`, step inside it with `docker exec -it <container> sh`, then inspect ports and environment variables. Rebuild with `docker compose up --build` only when code or the Dockerfile has actually changed, and tidy up with `docker compose down`.
-
-## The one-page cheat sheet
-
-```bash
-docker build -t app .
-docker run -d -p 3000:3000 app
-docker ps
-docker logs -f <container>
-docker exec -it <container> sh
-docker network create app-net
-docker volume create pgdata
-docker compose up --build
-docker compose down
-```
-
-## What to leave for later
-
-Do not spend the first class on Kubernetes, Swarm, or production CI/CD. They matter, but they pull attention away from the core loop of build, run, and compose. A natural end goal is a trainee who has run a real multi-service project, can read its Dockerfile and Compose file without guessing, and can start or stop the whole thing with one Compose command.
