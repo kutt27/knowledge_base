@@ -1,0 +1,7 @@
+# Taste
+- Prefers simple, minimal solutions and objects to added complexity/scaffolding ("Don't make it complex") — favors the smallest change that works over broader tooling or extra setup steps. Confidence: 0.7
+- Prefers to own their own dev-environment setup (creating/using their own venv) rather than have the assistant install, replace, or register environments/kernels for them. Confidence: 0.6
+- When producing teaching/learning material, wants it broken down into a teachable lesson structure — for each idea: the problem it solves, how it solves it, and how to improve it — with explicit constraints/bridges between sections explaining why the next topic is needed (e.g. moving from regression to classification, or supervised to unsupervised), rather than continuous reference-style prose. Confidence: 0.75
+- Wants documents to use real Markdown headings (`#`/`##`/`###`) for sections, not italic-emphasised lines serving as pseudo-headings. Confidence: 0.7
+- Even in teaching material, wants meta/instructional language addressed at a learner or teacher stripped out (e.g. "Teaching aim", "A student should be able to…", "ask the class") — the prose should present the material directly. Confidence: 0.7
+- Wants educational write-ups delivered as shareable notes for a general readership, not framed or titled as "teacher notes" or a lesson plan — even when the content was requested as teachable material and is meant to be taught from. Confidence: 0.65
